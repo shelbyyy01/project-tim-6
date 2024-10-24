@@ -1,0 +1,318 @@
+:root {
+  --primary: coral;
+  --bg: #020202;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 3500px;
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid #ffffff00;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.navbar .navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f8e804;
+  margin-right: 250px;
+}
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: 0px;
+}
+
+.navbar .gambar {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0 1rem;
+  margin-left: 30px;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../gambar/ciba.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+.hero .content h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: var(--primary);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 1);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  text-align: center;
+}
+.hero .content h1 span {
+  color: #f8e804;
+}
+.hero .content p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 0.5px;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 1.5);
+  color: #ffffff;
+}
+
+/* layanan section */
+.layanan {
+  padding: 10rem 7% 1.4rem;
+}
+.layanan h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.layanan p {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.layanan .slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+.layanan .mySlides {
+  display: none;
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.keuntungan {
+  padding: 1.4rem 7% 1.4rem;
+}
+.keuntungan h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: var(--primary);
+}
+
+.keuntungan p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.keuntungan p strong {
+  color: var(--primary);
+}
+
+.proses h4 {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #f8e804;
+}
+.proses p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.proses p span {
+  text-align: center;
+  font-size: 1rem;
+}
+/* layanan end */
+
+/* about start */
+.about {
+  padding: 5rem 7% 2.4rem;
+  text-align: center;
+}
+.about h5 {
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+
+.about p {
+  text-align: center;
+}
+/* about end */
+/* kontak start */
+.kontak {
+  padding: 5rem 7% 2.4rem;
+  text-align: center;
+}
+.kontak h6 {
+  padding: 5rem 7% 2.4rem;
+  font-size: 1.4rem;
+  color: var(--primary);
+}
+.kontak li {
+  list-style: none;
+  font-weight: 400;
+}
+.kontak li i span {
+  margin-left: 2rem;
+}
+/* kontak end */
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* laptop */
+@media (max-width: 1199.98px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 991.98px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: tan;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.3);
+  }
+}
+
+/* handphone */
+@media (max-width: 575.98px) {
+  html {
+    font-size: 55%;
+  }
+}
